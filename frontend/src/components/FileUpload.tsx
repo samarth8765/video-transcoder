@@ -75,7 +75,6 @@ export const FileUpload = () => {
       } catch (err) {
         console.log(err);
         setUploadMessage(`Error uploading file ${file.name}`);
-        return;
       }
     };
 
@@ -97,10 +96,16 @@ export const FileUpload = () => {
               <table className="border border-black">
                 <thead className="border border-black rounded">
                   <tr>
-                    <th className="text-center p-2">Name</th>
-                    <th className="text-center">Size(MB)</th>
-                    <th className="text-center">Type</th>
-                    <th className="text-center p-2">Uploaded</th>
+                    <th className="text-center p-2 border border-black">
+                      Name
+                    </th>
+                    <th className="text-center border border-black">
+                      Size(MB)
+                    </th>
+                    <th className="text-center border border-black">Type</th>
+                    <th className="text-center p-2 border border-black">
+                      Uploaded
+                    </th>
                   </tr>
                 </thead>
                 <tbody>

@@ -28,11 +28,13 @@ app.post("/generate-presigned-url", async (req, res) => {
       Bucket: process.env.BUCKET_NAME!,
       Key: fileName,
       ContentType: fileType,
+      Metadata: {},
     });
 
     const url = await getSignedUrl(client, command, {
       expiresIn: 1800,
     });
+    console.log(url);
     console.log("done");
     return res.status(201).json({ url });
   } catch (err) {

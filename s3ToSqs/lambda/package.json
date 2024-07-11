@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "@aws-sdk/client-sqs": "^3.614.0"
+  },
+  "devDependencies": {
+    "dotenv": "^16.4.5"
+  }
+}
